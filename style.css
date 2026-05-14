@@ -114,7 +114,7 @@
         /* --- SECTION DEFAULTS --- */
         section {
             min-height: 100vh;
-            padding: 50px 10%;
+            padding: 5px 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
