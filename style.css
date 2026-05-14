@@ -1034,18 +1034,22 @@ nav a.contact-link {
 .border-field::after { background: linear-gradient(to bottom, transparent, #ffcc00, transparent); }
 /* Telemetry Hub Layout */
 .monitor-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Side-by-side layout */
-    gap: 30px;
-    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;      /* Horizontal layout */
+    justify-content: center;   /* Centers the three boxes */
+    gap: 20px;                 /* Space between the boxes */
+    width: 100%;
+    padding: 20px 5%;
+    box-sizing: border-box;
 }
 
 .monitor-feed {
-    border: 1px solid var(--primary-blue);
-    background: rgba(0, 123, 255, 0.05);
-    padding: 5px;
-    position: relative;
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.1);
+    flex: 1;                  /* Forces all 3 to stay the same width */
+    max-width: 30%;           /* Limits width so they don't get too big */
+    background: rgba(0, 20, 40, 0.4);
+    border: 1px solid rgba(0, 123, 255, 0.3);
+    display: flex;
+    flex-direction: column;   /* Keeps header, video, footer stacked inside */
 }
 
 .feed-header {
@@ -1066,8 +1070,9 @@ nav a.contact-link {
 }
 
 .asset-video {
-    max-width: 30%;
-	max-height: 30%;/* Matches your gray/blue theme */
+    width: 100% !important;   /* Occupy full width of the monitor-feed */
+    height: 180px;            /* Set a fixed height for all 3 for neatness */
+    object-fit: cover;        /* Crops video to fit without stretching */
     opacity: 0.8;
 }
 
