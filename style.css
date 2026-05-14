@@ -733,10 +733,8 @@ nav a.contact-link {
 
 .radar-sweep {
     position: absolute;
-    top: 10; left: 10; right: 10; bottom: 10;
-	border-radius: 50%;   /* Turns the square box into a perfect circle */
-    overflow: hidden;     /* Clips anything outside that circle */
-    background: conic-gradient(from 0deg, rgba(80, 250, 123, 0.1) 0deg, transparent 90deg);
+    top: -10; left: -10; right: -10; bottom: -10;
+    background: conic-gradient(from 0deg, transparent, rgba(80, 250, 123, 0.1));
     animation: rotate 4s linear infinite;
     pointer-events: none;
 }
