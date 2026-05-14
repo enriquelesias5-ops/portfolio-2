@@ -1018,7 +1018,16 @@ nav a.contact-link {
     80% { opacity: 1; }
     100% { top: 100%; opacity: 0; }
 }
-
+.terminal-box {
+    background: rgba(10, 15, 25, 0.95) !important; /* Makes it dark and solid */
+    border: 1px solid var(--primary-blue);
+    height: 300px; /* Give it a fixed height so it doesn't collapse */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+    position: relative;
+    z-index: 10;
+}
 /* Color overrides for other modules */
 .border-logic::after {background: linear-gradient(to bottom, transparent, #a855f7, transparent); }
 .border-comm::after { background: linear-gradient(to bottom, transparent, var(--accent-green), transparent); }
