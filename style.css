@@ -784,7 +784,7 @@ nav a.contact-link {
 
 .wave-info { display: flex; flex-direction: column; }
 .freq { font-family: 'JetBrains Mono'; font-size: 1.1rem; color: var(--accent-green); }
-.lang-name { font-family: 'JetBrains Mono'; font-size: 0.65rem; color: var(--text-gray); opacity: 0.7; }
+.lang-name { font-family: 'JetBrains Mono'; font-size: 0.75rem; color: var(--text-gray); opacity: 0.7; }
 
 .glitch-text {
     display: inline-block; /* Crucial for animation stability */
