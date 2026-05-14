@@ -1111,4 +1111,63 @@ nav a.contact-link {
     .monitor-grid {
         grid-template-columns: 1fr; /* Stack vertically on phones */
     }
+	.ops-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.terminal-box, .logs-box {
+    height: 300px;
+    font-family: 'JetBrains Mono', monospace;
+    background: rgba(0, 5, 10, 0.9) !important;
+    font-size: 0.85rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#terminal-output, #log-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    color: #50fa7b;
+}
+
+/* Terminal Input */
+.input-line { display: flex; align-items: center; padding: 10px; border-top: 1px solid rgba(0,255,0,0.1); }
+#terminal-input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+    flex: 1;
+    font-family: inherit;
+    margin-left: 10px;
+}
+
+/* Red Alert for Access Denied */
+.access-denied {
+    animation: red-alert 0.2s 3;
+}
+
+@keyframes red-alert {
+    0% { background: rgba(255, 0, 0, 0.2); }
+    100% { background: transparent; }
+}
+
+.cursor-blink { animation: terminal-cursor 1s steps(2) infinite; }
+@keyframes terminal-cursor { to { visibility: hidden; } }
+.node-pulse {
+    display: inline-block;
+    animation: pulse-icon 2s infinite ease-in-out;
+    color: var(--accent-green);
+    margin-right: 5px;
+}
+
+@keyframes pulse-icon {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+}
 }
