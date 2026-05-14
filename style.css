@@ -114,7 +114,7 @@
         /* --- SECTION DEFAULTS --- */
         section {
             min-height: 100vh;
-            padding: 100px 10%;
+            padding: 50px 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -670,20 +670,6 @@ nav a.contact-link {
     box-shadow: inset 0 0 30px rgba(0, 123, 255, 0.3), 0 0 15px rgba(0, 123, 255, 0.2);
 }
 
-/* The Circular Sweep Animation */
-.radar-sweep {
-    position: absolute;
-    top: -500%; left: -500%; width: 500%; height: 500%;
-    background: conic-gradient(from 0deg, transparent 50%, rgba(80, 250, 123, 0.4) 100%);
-    animation: rotate-sweep 4s linear infinite;
-    z-index: 1;
-    pointer-events: none;
-}
-
-@keyframes rotate-sweep {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 
 /* Radar Grid Background Elements */
 .radar-grid-circle {
@@ -913,7 +899,7 @@ nav a.contact-link {
     0% { width: 0; height: 0; opacity: 10; }
     100% { width: 250vw; height: 250vw; opacity: 10; }
 }
-/* --- SMK Diagnostic Card Styles --- */
+
 
 /* The Red Confidential Stamp */
 .confidential-stamp {
